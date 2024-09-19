@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos y enlaces a archivos externos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamers Family Consolas</title>
+    <link rel="stylesheet" href="style4.css"> <!-- Enlace al archivo CSS para estilos -->
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header class="header">
+        <div class="menu container">
+            <!-- Logo y menú de navegación -->
+            <a href="#" class="logo">GAMERS FAMILY</a>
+            <input type="checkbox" id="menu" /> <!-- Checkbox para el menú responsive -->
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="menu"> <!-- Icono del menú -->
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <!-- Elementos del menú de navegación -->
+                    <li><a href="https://pivigames.blog/">Inicio</a></li>
+                    <li><a href="https://store.steampowered.com/specials?l=spanish">Ofertas</a></li>
+                    <li><a href="https://pivigames.blog/">Productos</a></li>
+                    <li><a href="#">Contacto +51 954676127</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <!-- Contenido principal del encabezado -->
+            <div class="header-txt">
+                <h1>Compra tus <span>CONSOLAS</span> <br>favoritas aquí</h1>
+                <p>
+                    Gamers Family es una página web especializada en la venta de videojuegos de segunda mano,
+                     ofreciendo a los jugadores una amplia selección de títulos clásicos y modernos a precios competitivos.
+                </p>
+                <div class="butons">
+                    <!-- Botones de navegación -->
+                    <a href="index.html" class="btn-1">Inicio</a>
+                    <a href="#" class="btn-1">Juegos</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de registro de usuario -->
+    <section class="registro">
+        <h2>Registro de Usuario</h2>
+        <form id="registrationForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="passwordConfirm">Vuelva a escribir Contraseña:</label>
+            <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+
+    <!-- Script para manejar el formulario de registro -->
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            // Obtener los valores del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const passwordConfirm = document.getElementById('passwordConfirm').value;
+
+            // Validar contraseñas coincidentes
+            if (password !== passwordConfirm) {
+                alert('Las contraseñas no coinciden.');
+                return;
+            }
+
+            // Aquí puedes enviar los datos a tu servidor o procesarlos como desees
+            console.log('Nombre:', name);
+            console.log('Correo Electrónico:', email);
+            console.log('Contraseña:', password);
+
+            // Mensaje de éxito (puedes mejorarlo)
+            alert('Registro exitoso. Bienvenido, ' + name + '!');
+
+            // Opcional: limpiar el formulario
+            document.getElementById('registrationForm').reset();
+
+            // Redirige a la página de inicio
+            window.location.href = "index.html";
+        });
+    </script>
+
+    <!-- Estilos internos -->
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .header { background-color: #1654ff; padding: 20px 0; color: white; }
+        .header-content { text-align: center; }
+        .header-txt h1 span { color: #ffcc00; }
+        .butons a { margin: 10px; padding: 10px 20px; background-color: #ffcc00; text-decoration: none; color: #000; }
+        section.registro { max-width: 400px; margin: auto; padding: 20px; background-color: #f7f7f7; border-radius: 10px; }
+        form { max-width: 300px; margin: auto; }
+        label, input { display: block; margin: 10px 0; color: #1654ff; }
+        button { margin-top: 15px; background-color: #0b861c; color: white; padding: 10px; width: 100%; }
+        .footer { text-align: center; margin-top: 20px; padding: 10px; background-color: #333; color: white; }
+    </style>
+</body>
+</html>

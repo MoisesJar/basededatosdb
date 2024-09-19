@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Reseteo de márgenes, padding, box-sizing y eliminación de subrayados y listas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilo base del cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111111;
+}
+
+/* Asegura que las imágenes no se excedan del ancho máximo */
+img {
+    max-width: 100%;
+}
+
+/* Contenedor centralizado y con ancho máximo de 1200px */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo del encabezado con imagen de fondo y centrado vertical */
+.header {
+    background-image: url(images/efe2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 80px 0;
+}
+
+/* Menú de navegación, alineado a ambos lados */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo del logo en el menú */
+.logo {
+    color: #FF5A2C;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Elementos de lista en el menú de navegación */
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+/* Estilo de los enlaces dentro del menú de navegación */
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    display: block;
+}
+
+/* Efecto hover en los enlaces del menú */
+.menu .navbar ul li a:hover {
+    color: #FF5A2C;
+}
+
+/* Ocultar el menú por defecto */
+#menu {
+    display: none;
+}
+
+/* Icono de menú para versiones móviles */
+.menu-icono{
+    width: 25px;
+}
+
+/* Estilo del label para el icono de menú */
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Contenido del encabezado dividido en dos columnas */
+.header-content {
+    display: flex;
+}
+
+/* Texto dentro del encabezado, ocupa el 50% del espacio */
+.header-txt {
+    flex-basis: 50%;
+}
+
+/* Título grande en el encabezado */
+.header-txt h1 {
+    font-size: 60px;
+    color: aqua;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* Color especial para la palabra destacada en el título */
+.header-txt span {
+    color: #FF5A2C;
+}
+
+/* Descripción debajo del título */
+.header-txt p {
+    font-size: 17px;
+    color: #E0E0E0;
+    margin-bottom: 45px;
+}
+
+/* Contenedor de botones en el encabezado */
+.butons {
+    display: flex;
+}
+
+/* Estilo general para los botones */
+.btn-1, .btn-2, .btn-3 {
+    display: inline-block;
+    padding: 11px 35px;
+    border: 2px solid #FF5A2C;
+    border-radius: 25px;
+    margin-right: 25px;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+/* Efecto hover en el botón principal */
+.btn-1:hover {
+    background-color: #FF5A2C;
+}
+
+/* Sección de productos populares */
+.popular {
+    padding: 100px;
+    text-align: center;
+}
+
+/* Título para la sección de productos */
+h2 {
+    color: #FFFFFF;
+    font-size: 35px;
+    margin-bottom: 45px;
+}
+
+/* Contenedor de los productos populares */
+.popular-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tamaño de las imágenes de productos populares */
+.popular-content img {
+    width: 150px;
+}
+
+/* Diseño de la cuadrícula para los productos */
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+/* Estilo individual para cada producto */
+.product-1 {
+    background-color: #ffffff;
+}
+
+/* Contenedor de texto dentro de cada producto */
+.product-txt {
+    padding: 50px 30px;
+}
+
+/* Título del producto */
+h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de precio y opciones */
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo del precio del producto */
+.price p {
+    font-size: 17px;
+    color: #FF5A2C;
+}
+
+/* Botón dentro de la sección de productos */
+.btn-2 {
+    padding: 5px 25px;
+    background-color: #FF5A2C;
+    margin-right: 0;
+}
+
+/* Sección de contacto */
+.contact {
+    padding: 150px 300px;
+}
+
+/* Contenido dentro del formulario de contacto */
+.contact-content {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+/* Estilo de los inputs en el formulario */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+/* Estilo del placeholder en los inputs */
+::placeholder {
+    color: #000000;
+    font-size: 17px;
+}
+
+/* Botón de envío en el formulario */
+.btn-3 {
+    background-color: #FF5A2C;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+/* Estilo del pie de página */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Enlaces dentro del pie de página */
+.link ul {
+    display: flex;
+}
+
+/* Estilo de los enlaces en el pie de página */
+.link ul li > a{
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-right: 20px;
+}
+
+/* Efecto hover en los enlaces del pie de página */
+.link ul li > a:hover {
+    color: #FF5A2C;
+}
+
+/* Media query para pantallas pequeñas */
+@media(max-width:991px) {
+
+    /* Ajustes del menú en pantallas pequeñas */
+    .menu {
+        padding: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FF5A2C;
+        display: none;
+    }
+
+    /* Estilo hover para enlaces dentro del menú */
+    .menu .navbar ul li a:hover {
+        color: #fcfbff;
+    }
+
+    /* Elementos del menú ocupan el ancho completo */
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    /* Mostrar menú cuando el checkbox está marcado */
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    /* Ajustes del encabezado en pantallas pequeñas */
+    .header {
+        min-height: 0vh;
+        padding: 80px 30px 50px 30px;
+    }
+
+    /* Texto del encabezado en pantallas pequeñas */
+    .header-txt {
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    /* Tamaño del título en pantallas pequeñas */
+    .header-txt h1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    /* Centramos los botones en pantallas pequeñas */
+    .butons {
+        justify-content: center;
+    }
+
+    /* Ocultamos la sección de populares en pantallas pequeñas */
+    .popular {
+        display: none;
+    }
+
+    /* Ajustes en la cuadrícula de productos */
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    /* Tamaño de la imagen del producto en pantallas pequeñas */
+    .product-1 img {
+        width: 100%;
+    }
+
+    /* Ajustes de padding en la sección de contacto */
+    .contact {
+        padding: 30px;
+    }
+
+    /* Ajustes del pie de página en pantallas pequeñas */
+    .footer {
+        flex-direction: column;
+    }
+
+    .link ul {
+        margin-top: 20px;
+    }
+}
+
+/* Estilo para los sliders */
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Estilo de la categoría del producto */
+.product-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+/* Contenedor de productos con scroll horizontal */
+.product-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+}
+
+/* Ajustes de los productos */
+.product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 350px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 2px rgba(0,0,0,0.1);
+}

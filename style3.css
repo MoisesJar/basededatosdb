@@ -1,0 +1,371 @@
+/* Importación de la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Estilos globales para remover márgenes, padding, decoraciones de texto y listas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;  
+    list-style: none;
+}
+
+/* Estilos generales del cuerpo, aplicando la fuente y color de fondo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1B1726;
+}
+
+/* Ajustes para todas las imágenes, limitando su ancho al 70% */
+img {
+    max-width: 70%;
+}
+
+/* Contenedor principal con ancho máximo y centrado automático */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos del header, con imagen de fondo, alineación y altura mínima */
+.header {
+    background-image: url(images/fondo2.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 80px 0;
+}
+
+/* Menú de navegación con posición absoluta y espacio entre elementos */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilos del logo del sitio, con tamaño de fuente y color */
+.logo {
+    color: #FF5A2C;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Navegación dentro del menú, elementos flotantes y con enlaces */
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    display: block;
+}
+
+/* Efecto hover en los enlaces del menú */
+.menu .navbar ul li a:hover {
+    color: #FF5A2C;
+}
+
+/* Menú oculto por defecto */
+#menu {
+    display: none;
+}
+
+/* Icono del menú en versión móvil */
+.menu-icono {
+    width: 25px;
+}
+
+/* Estilo del label que activa el menú en versión móvil */
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Contenido principal del header con flexbox */
+.header-content {
+    display: flex;
+}
+
+/* Estilos para la sección de texto dentro del header */
+.header-txt {
+    flex-basis: 50%;
+}
+
+/* Estilo del título dentro del header */
+.header-txt h1 {
+    font-size: 60px;
+    color: aqua;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* Resaltado de texto en el título con color específico */
+.header-txt span {
+    color: #FF5A2C;
+}
+
+/* Estilo para los párrafos dentro del header */
+.header-txt p {
+    font-size: 17px;
+    color: #E0E0E0;
+    margin-bottom: 45px;
+}
+
+/* Contenedor de botones dentro del header */
+.butons {
+    display: flex;
+}
+
+/* Estilos de los botones principales */
+.btn-1, .btn-2, .btn-3 {
+    display: inline-block;
+    padding: 11px 35px;
+    border: 2px solid #FF5A2C;
+    border-radius: 25px;
+    margin-right: 25px;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+/* Efecto hover para el primer botón */
+.btn-1:hover {
+    background-color: #FF5A2C;
+}
+
+/* Sección de productos populares con padding y centrado de texto */
+.popular {
+    padding: 100px;
+    text-align: center;
+}
+
+/* Títulos generales con color blanco y márgenes */
+h2 {
+    color: #FFFFFF;
+    font-size: 35px;
+    margin-bottom: 45px;
+}
+
+/* Contenedor para los productos populares, con espacio entre ellos */
+.popular-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Ajuste de las imágenes dentro de la sección de populares */
+.popular-content img {
+    width: 150px;
+}
+
+/* Grid para el contenido de los productos */
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+/* Estilo del primer producto en la lista */
+.product-1 {
+    background-color: #2A223A;
+}
+
+/* Texto dentro de los productos con padding */
+.product-txt {
+    padding: 50px 30px;
+}
+
+/* Títulos de los productos con tamaño y color */
+h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para los precios y su alineación */
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo de los precios dentro de los productos */
+.price p {
+    font-size: 17px;
+    color: #FF5A2C;
+}
+
+/* Estilo del segundo botón */
+.btn-2 {
+    padding: 5px 25px;
+    background-color: #FF5A2C;
+    margin-right: 0;
+}
+
+/* Sección de contacto con padding */
+.contact {
+    padding: 150px 300px;
+}
+
+/* Estilos del contenido de la sección de contacto */
+.contact-content {
+    background-color: #2A223A;
+    text-align: center;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+/* Estilos del formulario dentro de la sección de contacto */
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos de los inputs dentro del formulario */
+input {
+    padding: 18px 25px;
+    background-color: #3F3456;
+    border: 0;
+    border-radius: 25px;
+    outline: none;
+    margin-right: 10px;
+    color: #FFFFFF;
+    font-size: 17px;
+}
+
+/* Estilos para los placeholders dentro de los inputs */
+::placeholder {
+    color: #E0E0E0;
+    font-size: 17px;
+}
+
+/* Estilo del tercer botón */
+.btn-3 {
+    background-color: #FF5A2C;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+/* Estilos del pie de página, distribuyendo espacio entre elementos */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Enlaces dentro del pie de página */
+.link ul {
+    display: flex;
+}
+
+/* Estilos de los enlaces en el pie de página */
+.link ul li > a {
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-right: 20px;
+}
+
+/* Efecto hover en los enlaces del pie de página */
+.link ul li > a:hover {
+    color: #FF5A2C;
+}
+
+/* Estilos responsivos para pantallas de hasta 991px de ancho */
+@media(max-width:991px) {
+
+    /* Ajustes del menú en pantallas pequeñas */
+    .menu {
+        padding: initial;
+    }
+
+    /* Estilo del menú desplegable en pantallas pequeñas */
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FF5A2C;
+        display: none;
+    }
+
+    /* Efecto hover en los enlaces del menú móvil */
+    .menu .navbar ul li a:hover {
+        color: #1B1726;
+    }
+
+    /* Ajuste de ancho de los enlaces en el menú móvil */
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    /* Mostrar el menú al estar activado */
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    /* Ajustes del header en pantallas pequeñas */
+    .header {
+        min-height: 0vh;
+        padding: 80px 30px 50px 30px;
+    }
+
+    /* Centrado del texto en el header */
+    .header-txt {
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    /* Ajustes de tamaño del título en el header para pantallas pequeñas */
+    .header-txt h1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    /* Centrado de los botones en pantallas pequeñas */
+    .butons {
+        justify-content: center;
+    }
+
+    /* Remover margen en el último botón de la lista */
+    .btn-1:last-of-type {
+        margin-right: 0;
+    }
+
+    /* Ocultar la sección de populares en pantallas pequeñas */
+    .popular {
+        display: none;
+    }
+
+    /* Ajustes de padding en la sección de productos */
+    .product {
+        padding: 30px;
+    }
+
+    /* Mostrar los productos en una sola columna en pantallas pequeñas */
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Ajustes de padding en la sección de contacto */
+    .contact {
+        padding: 30px;
+    }
+
+    /* Ajustes del pie de página en pantallas pequeñas */
+    .footer {
+        flex-direction: column;
+    }
+}
